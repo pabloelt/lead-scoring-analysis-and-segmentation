@@ -80,14 +80,6 @@ A powerful predictive lead scoring model was developed using a straightforward l
 
 ## Project structure
 
-* 📁 Datos: Project datasets.
-  * 📁 Imagenes: Contains project images.
-* 📁 Notebooks:
-  * <mark>01_Diseño del proyecto.ipynb</mark>: Notebook compiling the initial design of the project.
-  * <mark>02_Creacion del Datamart Analitico.ipynb</mark>: Notebook creating analytic data mart (loading and unifying data, applying data quality processes, and so on).
-  * <mark>03_Analisis e Insights.ipynb</mark>: Notebook used for the execution of the exploratory data analysis, which collects the business insights and the recommended actionable initiatives.
-* 📈 <mark>Business_Case.xlsx</mark>: Business Case excel file.
-
 * 📁 00_Imagenes: Contains project images.
 * 📁 01_Documentos: Contains basic project files:
   * <mark>leadscoring.yml</mark>: Project environment file.
@@ -101,23 +93,33 @@ A powerful predictive lead scoring model was developed using a straightforward l
   * 📁 03_Trabajo
     * This folder contains the datasets resulting from each of the stages of the project (data quality, exploratory data analysis, variable transformation, ...).
 * 📁 03_Notebooks
-    * 📁 02_Development
+    * 📁 02_Desarrollo
       * <mark>01_Set Up.ipynb</mark>: Notebook used for the initial set up of the project.
       * <mark>02_Calidad de Datos.ipynb</mark>: Notebook detailing and executing all data quality processes.
       * <mark>03_EDA.ipynb</mark>: Notebook used for the execution of the exploratory data analysis.
       * <mark>04_Transformacion de datos.ipynb</mark>: Notebook that details and executes the data transformation processes necessary to prepare the variables for the models.
       * <mark>05_Modelizacion para No Supervisado.ipynb</mark>: Notebook for modeling the unsupervised Kmeans algorithm used to perform lead segmentation.
-      * 06_Feature Selection.ipynb: Notebook used to make a selection of the final variables to be entered into the models.
-07_Supervised Classification Modelling.ipynb: Notebook for modelling the predictive lead scoring model. Model selection, hyperparameterisation, selection of the optimal discrimination threshold and evaluation of results.
-08_Production Code Preparation.ipynb: Notebook used to compile all the quality, transformation and variable selection processes, as well as the final model and execution and retraining processes, with the aim of creating the final retraining and execution pipes that condense all the aforementioned processes.
-09_Retraining script.ipynb: Notebook to retrain the model with new data when necessary.
-10_Execution script.ipynb: Notebook to execute the final model and obtain the results.
-📁 04_Models
-pipe_execution.pickle: pipe that condenses the final trained model as well as all necessary prior data transformations.
-pipe_training.pickle: pipe that condenses the entire training process. It can be used to retrain the model with new data when necessary.
-optimal_disc_threshold.pickle: Contains the value of the optimal discrimination threshold of the model that maximises the company's roi. It is used by pipe_training.pickle and is updated when re-training the model with pipe_training.pickle.
-📁 05_Results
-Project Results.ipynb: Notebook summarising the insights and KPIs improvements achieved from the exploratory data analysis as well as from the execution of the scoring and lead segmentation machine learning models.
-Execution script.py: Python script to execute the model and obtain the results.
-Retraining script.py: Python script to retrain the model with new data when necessary.
-final features.pickle: Names of the final features pre-selected for input to the model.
+      * <mark>06_Preselección de variables.ipynb</mark>: Notebook used to make a selection of the final variables to be entered into the models.
+      * <mark>07_Modelizacion para Clasificacion.ipynb</mark>: Notebook for modeling the predictive lead scoring model. It contains the model selection, the hyperparametrization, the selection of the optimal discrimination threshold, and the evaluation of results.
+      * <mark>08_Preparacion del codigo de produccion.ipynb</mark>: Notebook used to compile all the quality, transformation, and variable selection processes, as well as the final model and execution and retraining processes. It is used to create the final retraining and execution pipes that condense all the aforementioned processes.
+      * <mark>09_Codigo de reentrenamiento.ipynb</mark>: Notebook to retrain the model with new data when necessary.
+      * <mark>10_Codigo de ejecucion.ipynb</mark>: Notebook to execute the final model and obtain the results.
+* 📁 04_Modelos
+  * <mark>pipe_ejecucion.pickle</mark>: Pipe that condenses the final trained model as well as all necessary prior data transformations.
+  * <mark>pipe_entrenamiento.pickle</mark>: Pipe that condenses the entire training process. It can be used to retrain the model with new data when necessary.
+  * <mark>optimal_disc_threshold.pickle</mark>: Contains the value of the optimal discrimination threshold of the model that maximizes the company's ROI. It is used by pipe_ejecucion.pickle and is updated when re-training the model with pipe_entrenamiento.pickle.
+* 📁 05_Resultados
+  * <mark>Resultados del proyecto.ipynb</mark>: Notebook summarising the insights and KPIs improvements achieved from the exploratory data analysis as well as from the execution of the scoring and lead segmentation machine learning models.
+  * <mark>Codigo de ejecucion.py</mark>: Python script to execute the model and obtain the results.
+  * <mark>Codigo de reentrenamiento.py</mark>: Python script to retrain the model with new data when necessary.
+  * <mark>variables_finales.pickle</mark>: Names of the final features pre-selected for the input of the predictive model.
+
+## Instructions
+
+The project should be run using the same environment in which it was created.
+
+* Project environment can be replicated using the <mark>leadscoring.yml</mark> file, which was created during the set up phase of the project. It can be found in the folder <mark>01_Documentos</mark>.
+* To replicate the environment it is necessary to copy the <mark>leadscoring.yml</mark> file to the directory and use the terminal or anaconda prompt executing:
+  * conda env create --file leadscoring.yml --name project_name
+
+On the other hand, remember to update the project_path variable of the notebooks to the path where you have replicated the project.
