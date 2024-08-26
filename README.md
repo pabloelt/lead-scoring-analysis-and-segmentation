@@ -27,7 +27,7 @@ Once these leads are acquired, the sales team begins reaching out via calls, ema
 The main objective is to analyse the historical leads information of the company to propose potential actions that will increase the overall turnover and reverse the low conversion rate at which the company is operating. To achieve this goal, we will create advanced analytical assets such as:
 
 * **Lead segmentation model:** This tool will help to identify the key customer groups interested in the product, enabling the sales team to tailor marketing efforts effectively for each identified segment.
-***Predictive lead scoring model:** It will assist the sales team in identifying potential customers who are most likely to convert into final clients, as well as leads that are not economically viable to pursue.
+* **Predictive lead scoring model:** It will assist the sales team in identifying potential customers who are most likely to convert into final clients, as well as leads that are not economically viable to pursue.
 
 ## Project results
 
@@ -54,7 +54,22 @@ Several insights have been uncovered through the exploratory data analysis. The 
 
 ### Lead segmentation model
 
+Four distinct potential customer profiles were identified through the implementation of the lead segmentation model. These profiles correspond to very low, low, medium, and super high-quality leads. The key actionable initiatives for each profile are summarized below.
+
+1. The company's most valuable leads are working professionals who arrive through the lead form submission.
+2. While SMS campaigns are generally effective, they should be targeted more precisely:
+  * Focus on working professionals from API sources who spend above-average time on the website.
+  * Avoid sending SMS to leads from Landing Page Submissions who spend minimal time on the site, as they represent the lowest quality leads and divert resources from more promising campaigns.
+3. The live chat feature primarily attracts low-quality leads. The company should consider reallocating resources from this service and, for leads from API sources, prioritize email marketing and SMS campaigns instead.
+
 ### Predictive lead scoring model
+
+A powerful predictive lead scoring model was developed using a straightforward logistic regression algorithm. After implementing this predictive model, the company has been able to:
+
+1. Increase its conversion rate from 41.70% to 45.77%.
+2. Reduce by 9.31% the workload to be managed by the sales department.
+3. Reduce by 28.81% the loss in investments.
+4. Increase its sales profit by 4.75%.
 
 The main results obtained from this Discovery Project are summarized below:
 
