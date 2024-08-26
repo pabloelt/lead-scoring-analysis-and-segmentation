@@ -73,56 +73,10 @@ A powerful predictive lead scoring model was developed using a straightforward l
 
 |   | As is  | To be  | Improvements  |
 |--:|--:|--:|--:|
-| Conversion rate  |   |   |   |
-| Workload  |   |   |   |
-| Lost investment  |   |   |   |
-| Sales profit  |   |   |   |
-
-The main results obtained from this Discovery Project are summarized below:
-
-### After analyzing the data, the baseline of the company has been found
-
-* In each session, on average:
-  * 2.2 products are viewed.
-  * 1.3 products are added to the cart.
-  * 0.9 products are removed from the cart.
-  * 0.3 products are purchased.
-* Cross-selling: median of 5 products per purchase.
-* Recurrence: 10% of customers repeat purchases after the first month.
-* Conversion rates:
-  * 60% from views to cart additions.
-  * 22% from cart additions to purchases.
-  * 13% from views to purchases.
-* Average monthly revenue: 125.000€
-
-### Actionable initiatives
-
-A plan of 10 specific initiatives, organized into five major business levers, has been derived from the exploratory data analysis to break the stagnant trend in the company over the last few months and achieve an overall increase in ecommerce revenues:
-
-#### Actions to increase the number of views:
-
-1. Review paid campaigns (generation and retargeting) to focus investment during the time slots between 9 am and 1 pm, and between 6 pm and 8 pm.
-2. Concentrate investment for the Christmas and post-Christmas period during the Black Friday week.
-3. Increase investment to reach the maximum CPA based on the identified LTV.
-
-#### Actions to increase conversion rates:
-
-4. Preconfigure the homepage with the products identified in the "most viewed" and "most sold" analyses.
-5. Work on products with a high cart abandonment rate.
-6. Work on products that are frequently viewed but infrequently purchased.
-
-#### Actions to increase cross-selling:
-
- 7. The median purchase is 5 products at the moment. To increase this ratio, implement real-time recommendations using the new recommendation system.
-
-#### Actions to increase purchase frequency:
-
-8. The 90% of the customers only make a single purchase. Create a periodic newsletter using the new recommendation system to increase visit frequency.
-9. Run promotional campaigns targeting the top segments identified in the RFM segmentation.
-
-#### Actions to improve customer loyalty:
-
-10. Create a loyalty program based on the new RFM segmentation.
+| Conversion rate  | 41.70%  | 45.77%  | Increased by 4.07%  |
+| Workload  | 2084  | 1890  | Reduced by 9.31%  |
+| Lost investment  | 6075  | 4325  | Reduced by 28.81%  |
+| Sales profit  | 33021.31  | 34591.35  | Increased by 4.75%  |
 
 ## Project structure
 
@@ -133,3 +87,37 @@ A plan of 10 specific initiatives, organized into five major business levers, ha
   * <mark>02_Creacion del Datamart Analitico.ipynb</mark>: Notebook creating analytic data mart (loading and unifying data, applying data quality processes, and so on).
   * <mark>03_Analisis e Insights.ipynb</mark>: Notebook used for the execution of the exploratory data analysis, which collects the business insights and the recommended actionable initiatives.
 * 📈 <mark>Business_Case.xlsx</mark>: Business Case excel file.
+
+* 📁 00_Imagenes: Contains project images.
+* 📁 01_Documentos: Contains basic project files:
+  * <mark>leadscoring.yml</mark>: Project environment file.
+  * <mark>FaseDesarrollo_Transformaciones.xlsx</mark>: Support file for designing feature transformation processes.
+  * <mark>FaseProduccion_Procesos.xlsx</mark>: Support file for designing final production script.
+* 📁 02_Datos
+  * 📁 01_Originales
+    * <mark>Leads.csv</mark>: Original dataset.
+  * 📁 02_Validacion
+    * <mark>validacion.csv</mark>: Sample extracted from the original dataset at the beginning of the project, which is used to check the correct performance of the model once it is put into production.
+  * 📁 03_Trabajo
+    * This folder contains the datasets resulting from each of the stages of the project (data quality, exploratory data analysis, variable transformation, ...).
+* 📁 03_Notebooks
+    * 📁 02_Development
+      * <mark>01_Set Up.ipynb</mark>: Notebook used for the initial set up of the project.
+      * <mark>02_Calidad de Datos.ipynb</mark>: Notebook detailing and executing all data quality processes.
+      * <mark>03_EDA.ipynb</mark>: Notebook used for the execution of the exploratory data analysis.
+      * <mark>04_Transformacion de datos.ipynb</mark>: Notebook that details and executes the data transformation processes necessary to prepare the variables for the models.
+      * <mark>05_Modelizacion para No Supervisado.ipynb</mark>: Notebook for modeling the unsupervised Kmeans algorithm used to perform lead segmentation.
+      * 06_Feature Selection.ipynb: Notebook used to make a selection of the final variables to be entered into the models.
+07_Supervised Classification Modelling.ipynb: Notebook for modelling the predictive lead scoring model. Model selection, hyperparameterisation, selection of the optimal discrimination threshold and evaluation of results.
+08_Production Code Preparation.ipynb: Notebook used to compile all the quality, transformation and variable selection processes, as well as the final model and execution and retraining processes, with the aim of creating the final retraining and execution pipes that condense all the aforementioned processes.
+09_Retraining script.ipynb: Notebook to retrain the model with new data when necessary.
+10_Execution script.ipynb: Notebook to execute the final model and obtain the results.
+📁 04_Models
+pipe_execution.pickle: pipe that condenses the final trained model as well as all necessary prior data transformations.
+pipe_training.pickle: pipe that condenses the entire training process. It can be used to retrain the model with new data when necessary.
+optimal_disc_threshold.pickle: Contains the value of the optimal discrimination threshold of the model that maximises the company's roi. It is used by pipe_training.pickle and is updated when re-training the model with pipe_training.pickle.
+📁 05_Results
+Project Results.ipynb: Notebook summarising the insights and KPIs improvements achieved from the exploratory data analysis as well as from the execution of the scoring and lead segmentation machine learning models.
+Execution script.py: Python script to execute the model and obtain the results.
+Retraining script.py: Python script to retrain the model with new data when necessary.
+final features.pickle: Names of the final features pre-selected for input to the model.
