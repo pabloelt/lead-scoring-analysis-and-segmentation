@@ -1,6 +1,6 @@
 # Lead Scoring Analysis and Segmentation
 
-![featured](https://github.com/pabloelt/lead-scoring-analysis-and-segmentation//blob/main/Datos/Imagenes/featured.jpg?raw=true)
+![featured](https://github.com/pabloelt/lead-scoring-analysis-and-segmentation//blob/main/00_Imagenes/featured.jpg?raw=true)
 
 ##### Table of Contents 
 * [Introduction](#introduction)
