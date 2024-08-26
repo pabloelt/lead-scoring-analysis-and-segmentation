@@ -7,6 +7,8 @@
 * [Objectives](#objectives)
 * [Project results](#project-results)
    * [Recommended actions from EDA](#recommended-actions-from-eda)
+   * [Lead segmentation model](#lead-segmentation-model)
+   * [Predictive lead scoring model](#predictive-lead-scoring-model)
 * [Project structure](#project-structure)
 * [Instructions](#instructions)
 
@@ -51,6 +53,8 @@ Several insights have been uncovered through the exploratory data analysis. The 
 4. Boost investments in SMS campaigns, given their strong performance.
 
 ### Lead segmentation model
+
+### Predictive lead scoring model
 
 The main results obtained from this Discovery Project are summarized below:
 
