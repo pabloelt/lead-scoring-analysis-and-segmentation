@@ -6,6 +6,7 @@
 * [Introduction](#introduction)
 * [Objectives](#objectives)
 * [Project results](#project-results)
+ * [Recommended actions from EDA](#recommended-actions-from-eda)
 * [Project structure](#project-structure)
 * [Instructions](#instructions)
 
@@ -28,7 +29,7 @@ The main objective is to analyse the historical leads information of the company
 
 ## Project results
 
-### Recommended actions from the EDA
+### Recommended actions from EDA
 
 Several insights have been uncovered through the exploratory data analysis. The main actionable initiatives are summarized below.
 
