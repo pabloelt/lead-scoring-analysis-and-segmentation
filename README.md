@@ -13,20 +13,43 @@
  
 ## Introduction
 
-The client for this project is a cosmetics ecommerce company based in Russia. They have experienced flat growth over the past few months and have hired us to analyze their transactional data and implement Conversion Rate Optimization (CRO) actions to reverse this situation.
+The client for this project is an online teaching company that offers a high-value online course designed to train professionals in the data science sector. The company advertises this course on various websites and search engines. When people visit the website—promoted effectively by the marketing department—they may browse the course, fill out a form, or watch related videos. If they provide their email address or phone number through a form, they are classified as a lead. Additionally, the company also acquires leads through referrals from past clients.
 
- * [See a technical explanation of the project here](https://pabloelt.github.io/project/project3/)
+Once these leads are acquired, the sales team begins reaching out via calls, emails, and other forms of communication. However, while some leads convert into customers, most do not, leading to inefficiencies that negatively impact the company’s profitability.
+
+ * [See a technical explanation of the project here](https://pabloelt.github.io/project/project5/)
 
 ## Objectives
 
-The main objective is to analyze the transactional data to identify potential CRO actions that can increase visits, conversions, and average ticket size, thereby boosting the overall revenue of the ecommerce company. To achieve this goal, we will create advanced analytical assets such as:
+The main objective is to analyse the historical leads information of the company to propose potential actions that will increase the overall turnover and reverse the low conversion rate at which the company is operating. To achieve this goal, we will create advanced analytical assets such as:
 
-* **RFM Segmentation:** Analyzing customer data based on Recency, Frequency, and Monetary value to identify key customer segments and tailor marketing strategies accordingly.
-* **Recommendation System:** Developing a recommendation system to personalize the shopping experience, encouraging higher conversions and increasing the average ticket size.
-
-These tools will help us implement effective CRO actions and drive substantial revenue growth.
+* **Lead segmentation model:** This tool will help to identify the key customer groups interested in the product, enabling the sales team to tailor marketing efforts effectively for each identified segment.
+***Predictive lead scoring model:** It will assist the sales team in identifying potential customers who are most likely to convert into final clients, as well as leads that are not economically viable to pursue.
 
 ## Project results
+
+### Recommended actions from the EDA
+
+Several insights have been uncovered through the exploratory data analysis. The main actionable initiatives are summarized below.
+
+**Actions to improve leads' management:**
+
+1. Enhance the quality of survey or form questions to gather more user inputs and reduce the occurrence of NaN or default (‘Select’) values.
+2. Collect timestamps for website visits to enable seasonality analysis and implement cookies to track and identify users as they navigate different pages on the website.
+3. Develop a new **lead segmentation algorithm** that categorizes the company's diverse lead profiles, enabling the identification of the best-fitting group for each new lead. This will allow for more personalized commercial actions.
+
+**Actions to improve lead-to-customer conversion rate:**
+
+1. Implement a **predictive lead scoring algorithm** that identifies individuals most likely to convert into paying customers. This will reduce the sales team's workload allowing them to focus more time on engaging with the most promising leads.
+
+**Actions to improve commercial and marketing channels performance:**
+
+1. Enhance the content strategy across the website, lead magnet, and emails to attract more traffic and increase user engagement. Focus on creating tailored content specifically for working professionals interested in the data science sector.
+2. Develop a referral program to motivate existing customers to recommend the course to their friends, family, and colleagues.
+3. Allocate more resources to acquiring leads through ‘Reference’ channel, as they demonstrate the highest conversion rate.
+4. Boost investments in SMS campaigns, given their strong performance.
+
+### Lead segmentation model
 
 The main results obtained from this Discovery Project are summarized below:
 
