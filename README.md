@@ -71,6 +71,13 @@ A powerful predictive lead scoring model was developed using a straightforward l
 3. Reduce by 28.81% the loss in investments.
 4. Increase its sales profit by 4.75%.
 
+|   | As is  | To be  | Improvements  |
+|--:|--:|--:|--:|
+| Conversion rate  |   |   |   |
+| Workload  |   |   |   |
+| Lost investment  |   |   |   |
+| Sales profit  |   |   |   |
+
 The main results obtained from this Discovery Project are summarized below:
 
 ### After analyzing the data, the baseline of the company has been found
