@@ -6,7 +6,7 @@
 * [Introduction](#introduction)
 * [Objectives](#objectives)
 * [Project results](#project-results)
- * [Recommended actions from EDA](#recommended-actions-from-eda)
+   * [Recommended actions from EDA](#recommended-actions-from-eda)
 * [Project structure](#project-structure)
 * [Instructions](#instructions)
 
