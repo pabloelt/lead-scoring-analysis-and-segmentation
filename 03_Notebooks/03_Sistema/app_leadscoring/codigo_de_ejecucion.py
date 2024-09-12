@@ -4,7 +4,7 @@
 # CODIGO DE EJECUCION
 
 #1.LIBRERIAS
-import cloudpickle
+import pickle
 import numpy as np
 import pandas as pd
 import warnings
@@ -35,14 +35,14 @@ def ejecutar_modelo(df):
       #3.CARGA PIPES DE EJECUCION
 
       with open('03_Notebooks/03_Sistema/app_leadscoring/pipe_ejecucion.pickle', mode='rb') as file:
-         pipe_ejecucion = cloudpickle.load(file)
+         pipe_ejecucion = pickle.load(file)
 
       #4.EJECUCION
 
       scoring = pipe_ejecucion.predict_proba(df)[:, 1]
 
       with open('03_Notebooks/03_Sistema/app_leadscoring/optimal_disc_threshold.pickle', mode='rb') as file:
-         disc_threshold = cloudpickle.load(file)
+         disc_threshold = pickle.load(file)
 
       scoring_roi = np.where(scoring > disc_threshold,1,0)
 
