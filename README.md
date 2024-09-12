@@ -115,8 +115,6 @@ To achieve this, a prototype web application has been designed. This web app gat
       * <mark>06_Preselección de variables.ipynb</mark>: Notebook used to make a selection of the final variables to be entered into the models.
       * <mark>07_Modelizacion para Clasificacion.ipynb</mark>: Notebook for modeling the predictive lead scoring model. It contains the model selection, the hyperparametrization, the selection of the optimal discrimination threshold, and the evaluation of results.
       * <mark>08_Preparacion del codigo de produccion.ipynb</mark>: Notebook used to compile all the quality, transformation, and variable selection processes, as well as the final model and execution and retraining processes. It is used to create the final retraining and execution pipes that condense all the aforementioned processes.
-      * <mark>09_Codigo de reentrenamiento.ipynb</mark>: Notebook to retrain the model with new data when necessary.
-      * <mark>10_Codigo de ejecucion.ipynb</mark>: Notebook to execute the final model and obtain the results.
     * 📁 03_Sistema
       * This folder contains the files (production script, models, functions ...) used in the model's deployment.
       * 📁 app_leadscoring
