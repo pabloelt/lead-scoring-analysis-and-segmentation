@@ -9,6 +9,7 @@
    * [Recommended actions from EDA](#recommended-actions-from-eda)
    * [Lead segmentation model](#lead-segmentation-model)
    * [Predictive lead scoring model](#predictive-lead-scoring-model)
+   * [Lead scoring analyzer web app](#lead-scoring-analyzer-web-app)
 * [Project structure](#project-structure)
 * [Instructions](#instructions)
 
@@ -78,8 +79,20 @@ A powerful predictive lead scoring model was developed using a straightforward l
 | Lost investment  | 6075  | 4325  | Reduced by 28.81%  |
 | Sales profit  | 33021.31  | 34591.35  | Increased by 4.75%  |
 
+### Lead scoring analyzer web app
+
+To maximize the value of the developed machine learning models, it is essential to seamlessly deploy them into production so that employees can start utilizing them to make informed, practical decisions.
+
+To achieve this, a prototype web application has been designed. This web app gathers internal data from the company for each client, as well as information provided by the customer through a web form application.
+
+[Launch Lead Scoring Analyzer Web App!](https://lead-scoring-analyzer-web-app.streamlit.app/)
+
+![featured](https://github.com/pabloelt/lead-scoring-analysis-and-segmentation//blob/main/00_Imagenes/web_app_1.png?raw=true)
+
 ## Project structure
 
+* 📁 .streamlit
+  * <mark>config.toml</mark>: File containing some configuration parameters for the [Lead Scoring Analyzer](https://lead-scoring-analyzer-web-app.streamlit.app/) web app.
 * 📁 00_Imagenes: Contains project images.
 * 📁 01_Documentos: Contains basic project files:
   * <mark>leadscoring.yml</mark>: Project environment file.
@@ -104,6 +117,10 @@ A powerful predictive lead scoring model was developed using a straightforward l
       * <mark>08_Preparacion del codigo de produccion.ipynb</mark>: Notebook used to compile all the quality, transformation, and variable selection processes, as well as the final model and execution and retraining processes. It is used to create the final retraining and execution pipes that condense all the aforementioned processes.
       * <mark>09_Codigo de reentrenamiento.ipynb</mark>: Notebook to retrain the model with new data when necessary.
       * <mark>10_Codigo de ejecucion.ipynb</mark>: Notebook to execute the final model and obtain the results.
+    * 📁 03_Sistema
+      * This folder contains the files (production script, models, functions ...) used in the model's deployment.
+      * 📁 app_leadscoring
+        * This folder contains the app files necessary for the deployment of the web application [Lead Scoring Analyzer](https://lead-scoring-analyzer-web-app.streamlit.app/).
 * 📁 04_Modelos
   * <mark>pipe_ejecucion.pickle</mark>: Pipe that condenses the final trained model as well as all necessary prior data transformations.
   * <mark>pipe_entrenamiento.pickle</mark>: Pipe that condenses the entire training process. It can be used to retrain the model with new data when necessary.
@@ -113,6 +130,7 @@ A powerful predictive lead scoring model was developed using a straightforward l
   * <mark>Codigo de ejecucion.py</mark>: Python script to execute the model and obtain the results.
   * <mark>Codigo de reentrenamiento.py</mark>: Python script to retrain the model with new data when necessary.
   * <mark>variables_finales.pickle</mark>: Names of the final features pre-selected for the input of the predictive model.
+  * <mark>Lead scoring analyzer web app link.md</mark>: File containing the link for the [Lead Scoring Analyzer](https://lead-scoring-analyzer-web-app.streamlit.app/) web app.
 
 ## Instructions
 
